@@ -3,14 +3,39 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "babel-jest": "^24.7.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/preset-react": "^7.0.0",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.12.1",
+    "jest": "^24.7.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.0-next.b0cbf2ca"
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "3.0.0-next.68",
+    "react-test-renderer": "^16.8.6"
+  },
+  "jest": {
+    "modulePaths": [
+      "__mocks__"
+    ],
+    "moduleNameMapper": {
+    "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/tools/assetsTransformer.js",
+    "\\.(css|less)$": "<rootDir>/tools/assetsTransformer.js"
+    }, 
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/build/"
+    ]
+  },
+  "transform": {
+    "\\.js$": "<rootDir>/node_modules/babel-jest"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "jest --coverage",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
