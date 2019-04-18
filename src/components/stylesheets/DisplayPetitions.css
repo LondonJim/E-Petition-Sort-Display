@@ -1,0 +1,13 @@
+.DisplayPetitions {
+  position: relative;
+  display: block;
+  left: 50%;
+  top: 30vh;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+#main-label {
+  font-size: 30px;
+}
